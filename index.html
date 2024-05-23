@@ -11,7 +11,7 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-image: url('pexels-mali-maeder-142497.jpg');
+            background-image: url('images/Calci.jpg'); /* Adjust path based on your folder structure */
             background-size: cover;
             background-repeat: no-repeat;
             color: #FFFFFF; /* White text */
@@ -27,10 +27,14 @@
             padding: 10px;
             border-radius: 25px;
             box-shadow: 0 0 10px 0 rgba(220, 220, 220, 0.8); /* Light grey shadow for contrast */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         #display {
-            width: 100%;
+            width: calc(100% - 20px); /* Adjust width to account for padding */
             height: 50px;
             border: none;
             background-color: rgba(220, 220, 220, 0.8); /* Light grey background for display */
@@ -39,6 +43,7 @@
             text-align: right;
             padding-right: 10px;
             box-sizing: border-box;
+            margin-bottom: 10px;
         }
 
         .button-container {
@@ -46,34 +51,29 @@
             justify-content: center;
             align-items: center;
             flex-wrap: wrap; /* Allows buttons to wrap within the container */
-            margin-top: 10px;
         }
         .button-container button {
-    color: #FFFFFF; /* White text */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black buttons */
-    font-weight: bold;
-    font-size: 16px;
-    width: 50px;
-    height: 50px;
-    border: none;
-    margin: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, filter 0.3s; /* Transition effect for background color and filter */
-    filter: blur(2px); /* Apply blur effect */
-}
+            color: #FFFFFF; /* White text */
+            background-color: rgba(0, 0, 0, 1); /* Black buttons */
+            font-weight: bold;
+            font-size: 16px;
+            width: 50px;
+            height: 50px;
+            border: none;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, filter 0.3s; /* Transition effect for background color and filter */
+        }
 
-.button-container button:hover {
-    background-color:rgba(0, 0, 0, 0.8); /* Darker semi-transparent background on hover */
-    color: #FFFFFF; /* White text on hover */
-    filter: blur(1px); /* Reduce blur on hover */
-}
+        .button-container button:hover {
+            background-color:rgba(0, 0, 0, 0.8); /* Darker semi-transparent background on hover */
+            color: #FFFFFF; /* White text on hover */
+        }
 
-.button-container button:active {
-    background-color: rgba(0, 0, 0, 0.8); /* Darker semi-transparent background when pressed */
-    filter: blur(0px); /* Remove blur on active/pressed state */
-}
-
+        .button-container button:active {
+            background-color: rgba(0, 0, 0, 0.8); /* Darker semi-transparent background when pressed */
+        }
     </style>
 </head>
 <body>
